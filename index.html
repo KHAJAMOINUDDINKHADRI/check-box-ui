@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Page UI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-container">
+        <!-- All Pages Option -->
+        <div class="home-container">
+          <div class="title-container">
+            <div class="home-title-container">
+              <p class="home-title-text">All pages</p>
+            </div>
+          </div>
+          <div class="icon-container">
+            <div class="select-icon" onclick="toggleTick(this)">
+              <div class="tick-mark-frame">
+                <div class="tick-mark-icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Separator Line -->
+        <div class="line-container">
+          <div class="line"></div>
+        </div>
+
+        <!-- Individual Pages -->
+        <div class="page-container">
+          <div class="page-item">
+            <div class="title-container">
+              <div class="page-item-title">
+                <p class="page-item-title-text">Page 1</p>
+              </div>
+            </div>
+            <div class="icon-container">
+              <div class="select-icon" onclick="toggleTick(this)">
+                <div class="tick-mark-frame">
+                  <div class="tick-mark-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-item">
+            <div class="title-container">
+              <div class="page-item-title">
+                <p class="page-item-title-text">Page 2</p>
+              </div>
+            </div>
+            <div class="icon-container">
+              <div class="select-icon" onclick="toggleTick(this)">
+                <div class="tick-mark-frame">
+                  <div class="tick-mark-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-item">
+            <div class="title-container">
+              <div class="page-item-title">
+                <p class="page-item-title-text">Page 3</p>
+              </div>
+            </div>
+            <div class="icon-container">
+              <div class="select-icon" onclick="toggleTick(this)">
+                <div class="tick-mark-frame">
+                  <div class="tick-mark-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-item">
+            <div class="title-container">
+              <div class="page-item-title">
+                <p class="page-item-title-text">Page 4</p>
+              </div>
+            </div>
+
+            <div class="icon-container">
+              <div class="select-icon" onclick="toggleTick(this)">
+                <div class="tick-mark-frame">
+                  <div class="tick-mark-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Separator Line -->
+        <div class="line-container">
+          <div class="line"></div>
+        </div>
+
+        <!-- Done Button -->
+        <div class="button-container">
+          <button class="button">
+            <p>Done</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Selection Logic -->
+    <script>
+      function toggleTick(element) {
+        const frame = element.querySelector(".tick-mark-frame");
+        const allFrames = document.querySelectorAll(".tick-mark-frame");
+        if (frame.classList.contains("selected")) {
+          frame.classList.remove("selected");
+        } else {
+          allFrames.forEach((f) => f.classList.remove("selected"));
+          frame.classList.add("selected");
+        }
+      }
+    </script>
+  </body>
+</html>

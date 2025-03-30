@@ -1,0 +1,218 @@
+/* Global Styles */
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0px;
+    color: #1f2128;
+}
+
+p{
+    margin : 0px;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+}
+
+/* Main Container Styles */
+.main-container {
+    max-width: 370px;
+    height: 326px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px 0px rgba(20, 20, 20, 0.12),
+        0px 0px 4px 0px rgba(20, 20, 20, 0.1);
+    position: absolute;
+    top: 85px;
+    left: 104px;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Home Container Styles */
+.home-container {
+    max-width: 370px;
+    max-height: 42px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px 8px 22px;
+    background-color: #ffffff;
+}
+
+/* Home Title Styles */
+.home-title-text {
+    text-align: center;
+    width: 64px;
+    height: 18px;
+    color: #141414;
+}
+
+/* Icon Styles */
+.select-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Tick Mark Frame Styles */
+.tick-mark-frame {
+    width: 23px;
+    height: 23px;
+    border-radius: 6px;
+    border: 1px solid #cdcdcd;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.1s ease;
+}
+
+.tick-mark-frame:hover{
+    border-color: #BDBDBD;
+}
+
+.tick-mark-frame:hover:not(.selected) .fa-check {
+    color : #E3E3E3; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tick-mark-frame.selected {
+    background-color: #2469f6;
+    border-color: #2469f6;
+}
+
+.tick-mark-frame:hover.selected {
+    background-color: #5087F8;
+    border-color:#5087F8 ;
+}
+
+/* Tick Mark Icon Styles */
+.tick-mark-icon {
+    display: none;
+    width: 15.64px;
+    height: 11.04px;
+    transition: color 0.3s ease;
+}
+
+.fa-check{
+    width: 16px;
+    height: 11px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tick-mark-frame.selected .tick-mark-icon {
+    display: block;
+}
+
+.select-icon:hover .tick-mark-frame:not(.selected) .tick-mark-icon {
+    display: block;
+    color: #878787;
+}
+
+/* Line Styles */
+.line {
+    max-width: 340px;
+    height: 0.7px;
+    background-color: #cdcdcd;
+}
+
+.line-container {
+    max-width: 370px;
+    max-height: 20px;
+    padding: 10px 15px 10px 15px;
+    gap: 10px;
+}
+
+/* Page Container Styles */
+.page-container {
+    max-width: 370px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Page Item Styles */
+.page-item {
+    max-width: 370px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 22px;
+    background-color: #ffffff;
+}
+
+/* Title Container Styles */
+.title-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Page Item Title Styles */
+.page-item-title {
+    max-width: 370px;
+    height: 18px;
+    background-color: #ffffff;
+}
+
+.page-item-title-text {
+    height: 18px;
+    display: flex;
+    align-items: center;
+ 
+}
+
+/* Button Container Styles */
+.button-container {
+    max-width: 370px;
+    max-height: 60px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+/* Button Styles */
+.button {
+    width: 340px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #FFCE22;
+    border: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.1s ease;
+}
+
+.button:hover {
+    background-color: #FFD84D;
+}
